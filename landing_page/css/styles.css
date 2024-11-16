@@ -1,0 +1,214 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color:#E3E6E6; 
+
+}
+
+/* Navbar colors */
+.navbar{
+    background-color:#036C48 !important;
+    padding-left:10px;
+    padding-right: 10px !important;
+}
+.navbar-brand img {
+  width: 100px;
+}
+
+  .navbar-text{
+    line-height: 0.95;
+  }
+
+  .line1{
+    font-size: 12px;
+    color: white;
+  }
+  
+
+  .line2{
+    font-size: 16px;
+    color: white;
+  }
+
+  /* Estilo del dropdown ALL */
+
+  .form-inline{
+    display: flex;
+  }
+
+  .dropdown-category {
+ 
+    border-end-end-radius: 0px !important;
+    border-start-end-radius: 0px !important;
+  
+}
+
+/*Barra de Busquedad*/
+
+.search-input{
+    border-radius: 0px !important;
+
+}
+  
+  .btn-pink {
+    background-color: #7F1153;
+    border: none;
+    color: white;
+    width: 44px;
+    height: 38px;
+    border-start-start-radius: 0px !important;
+    border-end-start-radius: 0px !important;
+ 
+  }
+  
+  .sub-navbar {
+    font-size: 0.9rem;
+  }
+  
+  .sub-navbar a {
+    text-decoration: none;
+  }
+  
+  #timer {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .opciones-nav{
+    display: flex;
+    margin-right:10px ;
+    align-items: center; /* Alinea verticalmente todos los elementos */
+
+  }
+
+/*estilo para idiomas*/
+/* Estilo personalizado para el dropdown */
+.dropdown-idioma .btn {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre la bandera y el texto */
+  border: none; /* Quitar borde del botón */
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Color del texto */
+  font-weight: bold;
+}
+
+.icp-nav-flag {
+  display: inline-block;
+  width: 20px; /* Ancho de la bandera */
+  height: 14px; /* Alto de la bandera */
+  background-size: cover; /* Asegurar que la bandera se ajuste */
+}
+
+.dropdown-menu {
+  min-width: 120px; /* Tamaño mínimo del menú */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacio entre bandera y texto */
+}
+
+.dropdown-item .icp-nav-flag {
+  width: 20px;
+  height: 14px;
+}
+
+/*dropdown cuenta*/
+
+.dropdown-cuenta .btn {
+  display: block;
+  text-align: left; /* Alinear texto a la izquierda */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+}
+
+.dropdown-cuenta .lin1,
+.boton-dev .lin1{
+  font-size: 12px;
+  color: white;
+}
+
+
+.dropdown-cuenta .lin2,
+.boton-dev .lin2{
+  font-size: 14px;
+  color: white;
+}
+
+/*dropdown-devoluciones*/
+.boton-dev .btn {
+  display: block;
+  text-align: left; /* Alinear texto a la izquierda */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+}
+
+/*dropdown-devoluciones*/
+.boton-car .btn {
+  display: block;
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  font-weight: bold;
+}
+
+
+/*************************************estilos de contenedor principal******************************************/
+
+.custom-carousel .carousel-inner {
+  min-height: 500px; /* Ajusta este valor para alargar */
+}
+
+.carousel-control-prev{
+  left: -58px !important;
+
+}
+
+.carousel-control-next{
+  right: -58px !important;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* -------------SECCION42------------------------------------------------------------------------------------*/
+
+.titulo-sec2{
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.text-link1{
+  font-size: 0.8rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  color: rgb(59, 68, 201);
+}
+
+.text-center .img{
+  
+}
+
+
+/* -------------SECCION4------------------------------------------------------------------------------------*/
+.footer {
+  background-color: #232f3e;
+  color: white;
+  padding: 30px 0;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+/* ---------------------------------------------------------------------------------------------------------*/
+
+
+
