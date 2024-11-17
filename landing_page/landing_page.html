@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Navigation Bar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+  <link rel="icon" href="../imagenes/png-transparent-removebg-preview.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="./img/logo _de _amazon.png" alt="Amazon"></a>
+    <div class="navbar-text text-white mx-2">
+        <span class="line1">Deliver to Susan</span><br>
+        <span class="line2">Miami <strong>####</strong></span>
+    </div>
+    <form class="form-inline mx-3 flex-grow-1">
+      <select class=" form-control dropdown-category" style="width: auto;">
+        <option>All</option>
+        <!-- Add other categories as options here -->
+      </select>
+      <input class="form-control search-input" type="search" placeholder="Search Amazon">
+      <button class="btn btn-pink" type="submit">
+        <span class="fa fa-search"></span>
+      </button>
+    </form>
+
+    <!-- Navegacion a paginas-->
+    <div class="opciones-nav">
+      <!-- dropdow idiomas-->
+
+      <div class="dropdown-idioma" style="margin-right: 5px; position: relative;">
+        <button  id="dropdownButton" class="btn btn-ligth dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="icp-nav-flag" style="background-image: url('https://flagcdn.com/w320/us.png');"></span>
+          <div>EN</div>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#" onclick="setDropdownValue('EN', 'https://flagcdn.com/w320/us.png')">
+              <span class="icp-nav-flag" style="background-image: url('https://flagcdn.com/w320/us.png');"></span>
+              English-EN
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- dropdow cuenta-->
+
+      <div class="dropdown-cuenta " style="margin-right: 5px; position: relative;">
+        <button  id="dropdownButton" class="btn btn-secondary dropdown-toggle navbar-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="lin1"> Hola, id</span><br>
+          <span class="lin2"><strong>Cuenta & listas</strong></span>
+        </button>
+        <ul class="dropdown-menu">
+        </ul>
+      </div>
+      
+      <!-- dropdow devoluciones-->
+
+      <div class="boton-dev">
+        <button type="button" class="btn navbar-text">
+          <span class="lin1">Devoluciones</span><br>
+          <span class="lin2"><strong>y Pedidos</strong></span>
+        </button>
+      </div>
+
+      <!-- dropdow carrito-->
+
+      <div class="boton-car">
+        <button type="button" class="btn">  
+          <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+          <span id="glow-ingress-line2"> Carrito</span>
+        </button>
+      </div>
+    </div> 
+  </nav>
+
+  <div class="sub-navbar text-white py-1" style="background-color: #085749;">
+    <div class="d-flex" style="margin-left: 10px; margin-right: 10px;">
+      <div>
+        <a href="#" class="text-white mx-3" style="font-weight: bold;">Todo</a>
+        <a href="#" class="text-white mx-3">Same-Day Delivery</a>
+        <a href="#" class="text-white mx-3">Medical Care</a>
+        <a href="#" class="text-white mx-3">Buy Again</a>
+        <a href="#" class="text-white mx-3">Prime Video</a>
+        <a href="#" class="text-white mx-3">pharmacy</a>
+        <a href="#" class="text-white mx-3">Subscribe & save</a>
+        <a href="#" class="text-white mx-3">Amazon Basics</a>
+        <a href="#" class="text-white mx-3">Livestreamss</a>
+        <a href="#" class="text-white mx-3">Keep Shopping For</a>
+        <a href="#" class="text-white" style="margin-left: 5rem;">Black Friday Week starts Nov 12</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- *****************************************************************************************************-->
+
+
+      <!-- pagina principal-->
+
+      <div class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide custom-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/img_carrusel_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/img_carrusel_2.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!--*******************************Sección 2: Carruselproductos1 ******************************************************-->
+
+        <div class="container-redond" style="background-color: white; margin-top: 50px;">
+          <!-- Contenedor del carrusel -->
+          <div class="opciones-seccion2" style="padding: 20px;">
+            <h3 class="titulo-sec2 mb-3">Here comes Christmas <a href="#" class="text-link1">Explore now</a></h3>
+            <div id="christmasCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="carouselContent"></div>
+              <!-- Controles del Carrusel -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#christmasCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#christmasCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+         <!--*******************************Sección 2: Carruselproductos2 ******************************************************-->
+        <div class="container-redond" style="background-color: white; margin-top: 50px;">
+          <div class="opciones-seccion2" style="padding: 20px;">
+            <h3 class="titulo-sec2 mb-3">Here comes Christmas <a href="#" class="text-link1">Explore now</a></h3>
+            <div id="productos2-Carousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="carouselProductosContent"></div>
+              <!-- Controles del Carrusel -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#productos2-Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#productos2-Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+         <!--*******************************Sección 4: cards productos3 ******************************************************-->
+        
+
+        <div class="container-prod3" style="margin-top: 50px;">
+          <div class="row row-cols-4 g-4">
+            <div class="col">
+               <!--*******************************cards productos1 ******************************************************-->
+              <div class="card">
+                <h5 style="text-align: left;">Most-loved picks for you</h5>
+                <a href="">
+                  <img src="img/img1-secc4.jpg" class="product1-image" alt="...">
+                </a>
+                <div class="product-details">
+                  <p>
+                    Certified Refurbished Fire TV Stick Lite, free and live TV, Alexa Voice Remote Lite, smart home controls...
+                  </p>
+                  <p class="price"><strong>$24</strong>99</p>
+                </div>
+                <div class="image-opciones">
+                    <div class="opciones-img" style="display: flex; justify-content: space-between;">
+                      <a href="">
+                        <img src="./img/img1.1-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                      <a href="">
+                        <img src="./img/img1.2-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                      <a href="">
+                        <img src="./img/img1.3-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                      <a href="">
+                        <img src="./img/img1.4-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                    </div>
+                    <div class="footer-link">
+                      <a href="#" class="cta">Shop Customers’ Most-Loved</a>  
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col">
+               <!--*******************************cards productos2 ******************************************************-->
+              <div class="card">
+                <h5 style="text-align: left;">Save $30 with coupon</h5> 
+                <a href="">
+                  <img src="img/img2-secc4.jpg" class="product2-image" alt="...">
+                </a>
+                <div class="product-details">
+                  <p class="precio" style="margin-top: 20px;"><strong>$139</strong>.99</p>
+                  <p style="color: dimgrey;">Discount applied at checkout</p>
+                </div>
+                <div class="footer-link" style="margin-top: -10px;">
+                  <a href="#" class="cta"> Shop now </a>  
+                </div>
+              </div>
+            </div>
+             <!--*******************************cards productos3 ******************************************************-->
+            <div class="col">
+              <div class="card">
+                <h5 style="text-align: left;">Save $30 with coupon</h5> 
+                <a href="">
+                  <img src="img/img3-secc4.jpg" class="product3-image" alt="...">
+                </a>
+                <div class="footer-link" style="margin-top: 80px;">
+                  <a href="#" class="cta"> See more From Shopbop </a>  
+                </div>
+              </div>
+            </div>
+            
+<!--*******************************cards productos4******************************************************-->
+
+            <div class="col">
+              <div class="card">
+                <h5 style="text-align: left;">Hot prices on top products</h5>
+                <a href="">
+                  <img src="img/img4-secc4.jpg" class="product4-image" alt="...">
+                </a>
+                <div class="product-details">
+                  <p>
+                    Certified Refurbished Fire TV Stick Lite, free and live TV, Alexa Voice Remote Lite, smart home controls...
+                  </p>
+                  <p class="price"><strong>$24</strong>99</p>
+                </div>
+                <div class="image-opciones">
+                    <div class="opciones-img" style="display: flex; justify-content: space-between;">
+                      <a href="">
+                        <img src="./img/img4.1-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                      <a href="">
+                        <img src="./img/img4.2-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                      <a href="">
+                        <img src="./img/img4.3-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                      <a href="">
+                        <img src="./img/img4.4-secc4.jpg" alt="Thumbnail 1">
+                      </a>
+                    </div>
+                    <div class="footer-link">
+                      <a href="#" class="cta">Shop Customers’ Most-Loved</a>  
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+
+      <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <h5>Amazon</h5>
+              <ul>
+                  <li><a href="#">Acerca de Amazon</a></li>
+                  <li><a href="#">Prensa</a></li>
+                  <li><a href="#">Empleos</a></li>
+                  <li><a href="#">Política de privacidad</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h5>Ayuda</h5>
+              <ul>
+                  <li><a href="#">Centro de ayuda</a></li>
+                  <li><a href="#">Devoluciones</a></li>
+                  <li><a href="#">Métodos de pago</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h5>Síguenos</h5>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+      
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4c0694d6b6.js" crossorigin="anonymous"></script>
+  <script src="./js/controlador.js"></script>
+</body>
+</html>
