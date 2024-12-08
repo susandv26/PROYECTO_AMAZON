@@ -1,7 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color:#E3E6E6; 
-
+  background-color:#ffffff; 
 }
 
 /* Navbar colors */
@@ -155,100 +154,37 @@ body {
   font-weight: bold;
 }
 
-
-/*************************************estilos de contenedor principal******************************************/
-
-.custom-carousel .carousel-inner {
-  min-height: 500px; /* Ajusta este valor para alargar */
+/*estilos de pagina detalle*/
+.image-gallery .main-image img {
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.carousel-control-prev{
-  left: -58px !important;
-
+.image-gallery .thumbnail-images img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.carousel-control-next{
-  right: -58px !important;
-
+.bundles .bundle img {
+  width: 80px;
+  height: 80px;
 }
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-/* -------------SECCION42------------------------------------------------------------------------------------*/
-
-.titulo-sec2{
-  font-size: 1.4rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-}
-
-.text-link1{
-  font-size: 0.8rem;
-  font-family: 'Roboto';
-  font-style: normal;
-  color: rgb(59, 68, 201);
-}
-
-
-/*-------------------------------seccion 4 productos 3-------------------------------------------*/
 
 .card {
-  text-align: center; /* Centra el contenido del texto e imágenes */
-  padding: 16px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.product1-image {
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-  width: 80px; /* Asegúrate de que la imagen no desborde el contenedor */
-  height: auto;
+.btn-warning {
+  background-color: #ffa41c;
+  border: none;
 }
 
-.product-details p{
-  font-size:13px; 
-  text-align:justify;
-  line-height: 0.95;
-  margin-top: 22px;
+.btn-primary {
+  background-color: #007bff;
+  border: none;
 }
-
-.opciones-img{
-  border-radius: 5%;
-}
-
-.product3-image{
-  max-width:100%;
-  height: 130%;
-}
-
-.product4-image{
-  max-width:76%;
-}
-.footer-link{
-  text-align: left;
-  margin-top: 10px;
-  font-size: 0.8rem;
-}
-
-
-/* -------------SECCION4------------------------------------------------------------------------------------*/
-.footer {
-  background-color: #232f3e;
-  color: white;
-  padding: 30px 0;
-  margin-top: 50px;
-}
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-/* ---------------------------------------------------------------------------------------------------------*/
-
-
-

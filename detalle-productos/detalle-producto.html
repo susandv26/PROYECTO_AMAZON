@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Navigation Bar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+  <link rel="icon" href="../imagenes/png-transparent-removebg-preview.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="./img/logo _de _amazon.png" alt="Amazon"></a>
+    <div class="navbar-text text-white mx-2">
+        <span class="line1">Deliver to Susan</span><br>
+        <span class="line2">Miami <strong>####</strong></span>
+    </div>
+    <form class="form-inline mx-3 flex-grow-1">
+      <select class=" form-control dropdown-category" style="width: auto;">
+        <option>All</option>
+        <!-- Add other categories as options here -->
+      </select>
+      <input class="form-control search-input" type="search" placeholder="Search Amazon">
+      <button class="btn btn-pink" type="submit">
+        <span class="fa fa-search"></span>
+      </button>
+    </form>
+
+    <!-- Navegacion a paginas-->
+    <div class="opciones-nav">
+      <!-- dropdow idiomas-->
+
+      <div class="dropdown-idioma" style="margin-right: 5px; position: relative;">
+        <button  id="dropdownButton" class="btn btn-ligth dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="icp-nav-flag" style="background-image: url('https://flagcdn.com/w320/us.png');"></span>
+          <div>EN</div>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#" onclick="setDropdownValue('EN', 'https://flagcdn.com/w320/us.png')">
+              <span class="icp-nav-flag" style="background-image: url('https://flagcdn.com/w320/us.png');"></span>
+              English-EN
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- dropdow cuenta-->
+
+      <div class="dropdown-cuenta " style="margin-right: 5px; position: relative;">
+        <button  id="dropdownButton" class="btn btn-secondary dropdown-toggle navbar-text" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="lin1"> Hola, id</span><br>
+          <span class="lin2"><strong>Cuenta & listas</strong></span>
+        </button>
+        <ul class="dropdown-menu">
+        </ul>
+      </div>
+      
+      <!-- dropdow devoluciones-->
+
+      <div class="boton-dev">
+        <button type="button" class="btn navbar-text">
+          <span class="lin1">Devoluciones</span><br>
+          <span class="lin2"><strong>y Pedidos</strong></span>
+        </button>
+      </div>
+
+      <!-- dropdow carrito-->
+
+      <div class="boton-car">
+        <button type="button" class="btn">  
+          <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+          <span id="glow-ingress-line2"> Carrito</span>
+        </button>
+      </div>
+    </div> 
+  </nav>
+
+  <div class="sub-navbar bg-dark text-white py-1">
+    <div class="d-flex" style="margin-left: 10px; margin-right: 10px;">
+      <div>
+        <a href="#" class="text-white mx-3" style="font-weight: bold;">Todo</a>
+        <a href="#" class="text-white mx-3">Same-Day Delivery</a>
+        <a href="#" class="text-white mx-3">Medical Care</a>
+        <a href="#" class="text-white mx-3">Buy Again</a>
+        <a href="#" class="text-white mx-3">Prime Video</a>
+        <a href="#" class="text-white mx-3">pharmacy</a>
+        <a href="#" class="text-white mx-3">Subscribe & save</a>
+        <a href="#" class="text-white mx-3">Amazon Basics</a>
+        <a href="#" class="text-white mx-3">Livestreamss</a>
+        <a href="#" class="text-white mx-3">Keep Shopping For</a>
+        <a href="#" class="text-white" style="margin-left: 5rem;">Black Friday Week starts Nov 12</a>
+      </div>
+    </div>
+  </div>
+
+  <!--cuerpo de pagina detalle-->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Image Gallery -->
+      <div class="col-md-4">
+        <div class="image-gallery">
+          <div class="main-image mb-3">
+            <img src="./img/product-1-detalle.jpg" class="img-fluid" alt="Main Product Image">
+          </div>
+          <div class="thumbnail-images d-flex justify-content-start">
+            <img src="product-thumb1.jpg" class="img-thumbnail me-2" alt="Thumbnail 1">
+            <img src="product-thumb2.jpg" class="img-thumbnail me-2" alt="Thumbnail 2">
+            <img src="product-thumb3.jpg" class="img-thumbnail me-2" alt="Thumbnail 3">
+            <img src="product-thumb4.jpg" class="img-thumbnail me-2" alt="Thumbnail 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="col-md-5">
+        <h3>Roku Express 4K+</h3>
+        <p class="text-muted">Roku Streaming Device 4K/HDR, Roku Voice Remote, Free & Live TV</p>
+        <div class="ratings mb-2">
+          <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+          <span>(86,251 ratings)</span>
+        </div>
+        <p><strong>Amazon's Choice</strong></p>
+        <hr>
+        <p class="text-muted">10K+ bought in past month</p>
+        <h4 class="text-danger mb-0">-28% $28.87</h4>
+        <p class="text-muted mb-0">List Price: <s>$39.99</s></p>
+        <p class="small text-muted">FREE Returns</p>
+        <p class="small">Get it as soon as <strong>Friday, November 22</strong></p>
+        <p class="small">Available at a lower price from other sellers.</p>
+        <div class="bundles">
+          <h5>Bundles with this item</h5>
+          <div class="bundle-options d-flex">
+            <div class="bundle me-3">
+              <img src="./img/product-recomendad.jpg" class="img-thumbnail" alt="Bundle 1">
+              <p class="small text-danger mb-0">-23% $53.86</p>
+              <p class="small text-muted">List: $69.98</p>
+            </div>
+            <div class="bundle">
+              <img src="./img/product-recomendad_2.jpg" class="img-thumbnail" alt="Bundle 2">
+              <p class="small text-danger mb-0">-23% $68.86</p>
+              <p class="small text-muted">List: $89.98</p>
+            </div>
+          </div>
+          <a href="#" class="small text-primary">See all bundles</a>
+          <hr>
+        </div>
+      </div>
+
+      <!-- Purchase Options -->
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h4 class="text-danger mb-0">$28.87</h4>
+          <p class="small text-muted">FREE delivery <strong>Friday, November 22</strong></p>
+          <p class="text-success">In Stock</p>
+          <p class="small text-muted">Buy 2 or more, save 4%</p>
+          <label for="quantity" class="form-label">Quantity:</label>
+          <select id="quantity" class="form-select mb-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button class="btn btn-warning w-100 mb-2">Add to Cart</button>
+          <button class="btn w-100" style="background-color: #FA8900;">Buy Now</button>
+          <p class="small mt-3">
+            <strong>Ships from:</strong> Amazon.com<br>
+            <strong>Sold by:</strong> Amazon.com<br>
+            <strong>Returns:</strong> Returnable until Jan 31, 2025<br>
+            <strong>Payment:</strong> Secure transaction
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4c0694d6b6.js" crossorigin="anonymous"></script>
+  <script src="./js/controlador.js"></script>
+</body>
+</html>
