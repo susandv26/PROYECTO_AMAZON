@@ -6,40 +6,30 @@ const products = [
 
 let cart = [];
 
-function renderProducts() {
-    const productList = document.getElementById('product-list');
-    products.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'product';
-        productDiv.innerHTML = `
-            <h3>${product.name}</h3>
-            <p>Precio: $${product.price.toFixed(2)}</p>
-            <button onclick="addToCart(${product.id})">Agregar al Carrito</button>
-        `;
-        productList.appendChild(productDiv);
-    });
-}
-
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    cart.push(product);
-    renderCart();
-}
-
-function renderCart() {
+function updateCart() {
     const cartItems = document.getElementById('cart-items');
-    cartItems.innerHTML = '';
+    cartItems.innerHTML = ''; // Limpiar la lista de artículos en el carrito
     let total = 0;
 
-    cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-        cartItems.appendChild(li);
-        total += item.price;
+    products.forEach(product => {
+        const quantityInput = document.getElementById(`quantity-${product.id}`);
+        const quantity = parseInt(quantityInput.value);
+        
+        if (quantity > 0) {
+            total += product.price * quantity;
+            const li = document.createElement('li');
+            li.textContent = `${product.name}: ${quantity} x $${product.price.toFixed(2)}`;
+            cartItems.appendChild(li);
+        }
     });
 
     document.getElementById('total-price').textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// Cargar los productos al iniciar
-renderProducts();
+function proceedToCheckout() {
+    updateCart(); // Actualizar el carrito antes de proceder al pago
+    alert('Procediendo al pago...');
+}
+
+// Llamar a la función para actualizar el carrito al cargar la página
+updateCart();
