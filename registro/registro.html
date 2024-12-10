@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="javasript.js" defer></script>
     <title>Amazon Iniciar Sesion</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,24 +18,29 @@
         <div class="login-container"> 
 
             <h1>Crear cuenta</h1>
-            <form>
+            <form id="registerForm">
                 <label for="nombre">Tu nombre</label>
                 <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
                 
-                <label for="numberCo">Numero Telefono o Correo</label>
-                <input type="text" id="number" placeholder="Enter your number" required>
-                <label for="email">Contraseña</label>
-                <input type="text" id="password" placeholder="Como minimo 6 caracteres" required>
-
-                <label for="email">Vuelve a escribir la contraseña</label>
-                <input type="text" id="password" placeholder="" required>
-                <button type="submit">Continue</button>
+                <label for="numberCo">Número Teléfono o Correo</label>
+                <input type="correo" id="correo" placeholder="Correo Electrónico" required>
+                
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Como mínimo 6 caracteres" required>
+                
+                <label for="confirmPassword">Vuelve a escribir la contraseña</label>
+                <input type="password" id="confirmPassword" placeholder="" required>
+                
+                <button type="submit">Continuar</button>
             </form>
         <div class="login-link">
-            <p>¿Ya tienes una cuenta? <a href="C:\Users\Skifrots\Downloads\amazon">Iniciar sesión</a></p>
+            <p>¿Ya tienes una cuenta? <a href="../login/login.html">Iniciar sesión</a></p>
         </div>
         </div>
     </div>
+
+    <script src="javasript.js"></script>
 </body>
+
 </html>
     

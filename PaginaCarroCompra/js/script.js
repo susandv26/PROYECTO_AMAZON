@@ -31,5 +31,41 @@ function proceedToCheckout() {
     alert('Procediendo al pago...');
 }
 
+
+//funcion obtener el producto
+async function cargarCarrito() {
+    try {
+        const response = await fetch("http://localhost:3000/api/cart/1"); // Cambiar por el ID del usuario
+        const data = await response.json();
+
+        if (data.carrito) {
+            const cartItems = document.getElementById("cart-items");
+            const totalPrice = document.getElementById("total-price");
+
+            // Limpiar el carrito
+            cartItems.innerHTML = "";
+            let total = 0;
+
+            // Renderizar productos
+            data.carrito.forEach((producto) => {
+                const item = document.createElement("li");
+                item.textContent = `${producto.nombre_producto} - $${producto.precio_unitario} x ${producto.cantidad}`;
+                cartItems.appendChild(item);
+                total += producto.precio_unitario * producto.cantidad;
+            });
+
+            // Actualizar el total
+            totalPrice.textContent = `Total: $${total.toFixed(2)}`;
+        } else {
+            console.error("El carrito está vacío.");
+        }
+    } catch (error) {
+        console.error("Error al cargar el carrito:", error);
+    }
+}
+
+// Cargar el carrito al cargar la página
+window.onload = cargarCarrito;
+
 // Llamar a la función para actualizar el carrito al cargar la página
 updateCart();

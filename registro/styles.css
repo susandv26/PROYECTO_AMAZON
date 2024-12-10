@@ -1,0 +1,304 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.amazon-logo {
+    width: 150px; /* Ajustar el tamaño del logo */
+    margin-top: 70px; 
+    margin-bottom: 2px; /* Espacio debajo del logo */
+}
+
+
+/* Centrar el contenedor de login */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.login-container button {
+    background-color: #f0c14b;
+    color: #111;
+    border: 1px solid #a88734;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #e5b72f;
+}
+
+.login-container .small-text {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.new-to-amazon {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.new-to-amazon p {
+    font-size: 14px;
+    color: #837b7b;
+}
+
+.create-account-btn {
+    background-color: #ffffff ;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+    color: white;
+    margin-top: 10px;
+}
+
+.create-account-btn:hover {
+    background-color: #c5c5c1;
+}
+
+
+.help-link a {
+    color: #005f73; /* Azul más cálido */
+    text-decoration: none;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+.help-link a:hover {
+    text-decoration: underline;
+}
+
+#help-content, a {
+    color: #005f73; /* Azul más cálido */
+    text-decoration: none;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+#help-content a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+login-link {
+    color: #005f73; /* Azul más cálido */
+    text-decoration: none;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+login-link {
+    text-decoration: underline;
+}
+
+
+.address-bar {
+    display: flex;
+    align-items: center;
+    background-color: #232f3e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.location-icon {
+    width: 16px;
+    margin-right: 10px;
+}
+
+.address-text {
+    font-size: 14px;
+}
+
+.address-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.address-container {
+    background-color: #ffffff; /* Cambiar de gris a blanco */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.address-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.address-container form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.address-container form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.address-container form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.address-container form button:hover {
+    background-color: #e68900;
+}
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+.payment-methods {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f3f3f3;
+}
+
+.payment-methods h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-method {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 14px;
+    margin: 8px 0 4px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form .submit-button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form .submit-button:hover {
+    background-color: #e5b72f;
+}
+
+.add-button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.add-button:hover {
+    background-color: #e5b72f;
+}
+
+/* Estilos para los iconos de tarjetas */
+.card-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    width: 50px; /* Tamaño pequeño */
+    height: auto;
+}
