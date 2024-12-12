@@ -1,4 +1,4 @@
-const products = [
+/*const products = [
     { id: 1, name: "Producto 1", price: 29.99 },
     { id: 2, name: "Producto 2", price: 49.99 },
     { id: 3, name: "Producto 3", price: 19.99 },
@@ -25,47 +25,129 @@ function updateCart() {
 
     document.getElementById('total-price').textContent = `Total: $${total.toFixed(2)}`;
 }
+  */
 
-function proceedToCheckout() {
-    updateCart(); // Actualizar el carrito antes de proceder al pago
-    alert('Procediendo al pago...');
-}
-
-
-//funcion obtener el producto
-async function cargarCarrito() {
+// Función para obtener el carrito del backend
+async function fetchCarrito(id_usuario) {
     try {
-        const response = await fetch("http://localhost:3000/api/cart/1"); // Cambiar por el ID del usuario
-        const data = await response.json();
-
-        if (data.carrito) {
-            const cartItems = document.getElementById("cart-items");
-            const totalPrice = document.getElementById("total-price");
-
-            // Limpiar el carrito
-            cartItems.innerHTML = "";
-            let total = 0;
-
-            // Renderizar productos
-            data.carrito.forEach((producto) => {
-                const item = document.createElement("li");
-                item.textContent = `${producto.nombre_producto} - $${producto.precio_unitario} x ${producto.cantidad}`;
-                cartItems.appendChild(item);
-                total += producto.precio_unitario * producto.cantidad;
-            });
-
-            // Actualizar el total
-            totalPrice.textContent = `Total: $${total.toFixed(2)}`;
+        const response = await fetch(`http://localhost:3000/api/cart/${id_usuario}`); // Endpoint del carrito
+        if (response.ok) {
+            const data = await response.json(); // Obtener datos en formato JSON
+            renderizarCarrito(data.carrito); // Renderizar productos en el carrito
         } else {
-            console.error("El carrito está vacío.");
+            console.error("Error al obtener el carrito:", response.statusText);
+            mostrarMensajeError("No se pudo cargar el carrito. Inténtalo más tarde.");
         }
     } catch (error) {
-        console.error("Error al cargar el carrito:", error);
+        console.error("Error al obtener el carrito:", error);
+        mostrarMensajeError("Error al conectar con el servidor.");
     }
 }
 
-// Cargar el carrito al cargar la página
-window.onload = cargarCarrito;
+// Función para renderizar los productos del carrito
+function renderizarCarrito(productos) {
+    const contenedorCarrito = document.querySelector("#carrito-container"); // Selecciona el contenedor del carrito
+    const totalContainer = document.querySelector("#carrito-total"); // Contenedor para el total
 
-// Llamar a la función para actualizar el carrito al cargar la página
-updateCart();
+    if (!contenedorCarrito || !totalContainer) {
+        console.error("No se encontró el contenedor del carrito o el total.");
+        return;
+    }
+
+    // Limpiar el contenido previo del contenedor
+    contenedorCarrito.innerHTML = "";
+    totalContainer.innerHTML = "";
+
+    // Si el carrito está vacío
+    if (!productos || productos.length === 0) {
+        contenedorCarrito.innerHTML = "<p>Tu carrito está vacío. ¡Añade productos!</p>";
+        totalContainer.innerHTML = ""; // Limpia el contenedor del total
+        return;
+    }
+
+    // Renderizar cada producto en el carrito
+    let totalGlobal = 0;
+    productos.forEach((producto) => {
+        const tarjetaHTML = `
+           <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${producto.imagen}" class="img-fluid rounded-start" alt="${producto.nombre_producto}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${producto.nombre_producto}</h5>
+                            <p class="card-text">Precio unitario: $${producto.precio_unitario.toFixed(2)}</p>
+                            <p class="card-text">Cantidad: ${producto.cantidad}</p>
+                            <p class="card-text">Total: $${producto.total.toFixed(2)}</p>
+                            <button class="btn btn-danger" onclick="eliminarProducto(${producto.id_carrito_product})">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        contenedorCarrito.innerHTML += tarjetaHTML;
+
+        // Calcular el total global
+        totalGlobal += producto.total;
+    });
+
+    const totalHTML = `
+       <div class="card p-3">
+            <h4>Total del carrito</h4>
+            <h5>$${totalGlobal.toFixed(2)}</h5>
+            <button id="btn-proceder-pago" class="btn btn-success w-100">Proceder al Pago</button>
+        </div>
+    `;
+    totalContainer.innerHTML = totalHTML;
+
+// Función para proceder al pago
+document.getElementById("btn-proceder-pago").addEventListener("click", () => {
+    if (productos.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de proceder al pago.");
+        return;
+    }
+
+    // Redirige a la página de pagos
+    window.location.href = "/FRONTEND/metodo_pago/pagos.html"; // Asegúrate de que este archivo exista
+});
+
+}
+
+// Función para eliminar un producto del carrito
+async function eliminarProducto(id_carrito_product) {
+    try {
+        const response = await fetch(`http://localhost:3000/api/cart/${id_carrito_product}`, {
+            method: "DELETE",
+        });
+
+        if (response.ok) {
+            alert("Producto eliminado del carrito con éxito.");
+            const id_usuario = obtenerIdUsuario();
+            fetchCarrito(id_usuario);
+        } else {
+            const errorMsg = await response.json();
+            console.error("Error al eliminar el producto:", errorMsg);
+            mostrarMensajeError("No se pudo eliminar el producto. Inténtalo más tarde.");
+        }
+    } catch (error) {
+        console.error("Error al eliminar el producto:", error);
+    }
+}
+
+// Función para mostrar mensajes de error
+function mostrarMensajeError(mensaje) {
+    const contenedorCarrito = document.querySelector("#carrito-container");
+    contenedorCarrito.innerHTML = `<p class="error">${mensaje}</p>`;
+}
+
+// Función para obtener el ID del usuario actual
+function obtenerIdUsuario() {
+    return 2; // Cambiar por la lógica adecuada
+}
+
+// Inicializar la página del carrito al cargar
+document.addEventListener("DOMContentLoaded", () => {
+    const id_usuario = obtenerIdUsuario();
+    fetchCarrito(id_usuario);
+});
